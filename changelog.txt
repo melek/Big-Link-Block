@@ -1,0 +1,28 @@
+....-=*0.01*=-....
+12-15-13     v0.01
+Lionel Di Giacomo
+
+*Forked Headway-Example-Block repository
+*Changed Filename of main PHP file, Began work going 
+  through and customizing block files
+
+*Plans before v0.1:
+  -Get basic link-block functionality working
+  -Register at least some options in headway to customize the overlay
+  
+*Goals for v1.0:
+  -Ensure cross-browser functionality
+  -Code in failsafe (transparant .png, display:none hover functionality) 
+     for cases where the overlay won't work
+  -Register suite of options in HeadWay visual editor:
+     =Hiding overlay on touch/mobile interfaces
+     =Customize color/image/transparency of overlay directly in HeadWay
+     =Customize transition effect
+     =Enable various failsafes
+     =Customization for Block Title
+     =Ability to edit Block Content
+
+*Possible Goals:
+  -Extending the block display into gutters, up to 50% a gutter width
+     to creaate tighter mosaics
+  -Changing shape/using masks (Probably must disable block title)
