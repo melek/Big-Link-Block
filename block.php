@@ -11,12 +11,32 @@ class BigLinkBlock extends HeadwayBlockAPI {
 
 	public $description = 'A custom text block with an anchor overlay which serves as one big button.';
 		
-/*	function dynamic_css($block_id) {
+	function dynamic_css($block_id) {
 		
-		return;
+  return 
+  '
+  .big-link-overlay {
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+  background-color:rgba(0, 0, 0, .1);
+  transition-property: background-color;
+  transition-duration: 0.25s
+}
+
+.big-link-overlay {
+  background-color:transparent;
+  transition-property: background-color;
+  transition-duration: 0.25s
+
+}';
 		
 	}
-*/
+
+
 
 	function setup_elements() {
 
@@ -24,7 +44,7 @@ class BigLinkBlock extends HeadwayBlockAPI {
 			'id' => 'overlay', 
 			'name' => 'Overlay', 
 			'selector' => '.big-link-overlay',
-			'properties' => array('background', 'borders', 'padding', 'rounded-corners', 'box-shadow'),
+			'properties' => array('background', 'borders', 'box-shadow'),
 			'states' => array(
 				'Selected' => '.big-link-overlay.selected', 
 				'Hover' => '.big-link-overlay:hover', 
@@ -44,13 +64,14 @@ class BigLinkBlock extends HeadwayBlockAPI {
 	
 	function content($block) {
 		
-		$blg_link_input = parent::get_setting($block, 'big_link_content', null); 
+		$big_link_content = parent::get_setting($block, 'content', null); 
 		
-		if ( $big_link_input == null ) {
-			
-//			echo big_link_content;
-						
-		}
+		$big_link_url = parent::get_setting($block, 'link_url', null);
+		
+    echo '<p><a href="'..'"><span class="big-link-overlay"></span></a></p>\n');
+    
+    echo headway_parse_php(do_shortcode(stripslashes($big_link_content)));
+
 		
 	}
 	

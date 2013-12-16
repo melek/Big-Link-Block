@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Headway Themes: Big Link Block
+Plugin Name: Big Link Block
 Plugin URI: https://github.com/melek/Big-Link-Block
 Description: 
 This block is basically a large button. Clicking anywhere on the block will follow a link. 
@@ -10,13 +10,13 @@ of a 'light up' rollover. Otherwise quite similar to the 'custom code' block.
 
 Forked from the 'Headway Example Block' on GitHub: https://github.com/headwaythemes/Headway-Block-Example
 
-Version: 0.02
+Version: 0.03
 Author: Lionel Di Giacomo
 Author URI: http://digiacom.wordpress.com
 License: GNU GPL v2
 */
 
-define('BIG_LINK_BLOCK_VERSION', '0.01');
+define('BIG_LINK_BLOCK_VERSION', '0.03');
  
 add_action('after_setup_theme', 'big_link_block_register');
 function big_link_block_register() {

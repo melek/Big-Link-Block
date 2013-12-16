@@ -1,3 +1,12 @@
+....-=*0.03*=-....
+12-16-13     v0.03
+Lionel Di Giacomo
+
+*Added untested block content
+  -Content (Including PHP and Shortcodes) is parsed
+  -Overlay should function, according to block options
+  -Overlay ought to be stylable in design mode
+
 ....-=*0.02*=-....
 12-16-13     v0.02
 Lionel Di Giacomo

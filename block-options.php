@@ -20,16 +20,16 @@ class BigLinkBlockOptions extends HeadwayBlockOptionsAPI {
         'label' => 'Link URL',
         'default' => '',
         'tooltip' => 'This is where clicking the block takes the user'
-			),
+			)/*,
 			'fade-time' => array(
         'type' => 'slider',
-        'name' => 'fade-time',
+        'name' => 'Initial',
         'label' => 'Fade Effect Time',
-        'default' => .5,
+        'default' => 5,
         'slider-min' => 0,
         'slider-max' => 5,
-        'slider-interval' => .1,
+        'slider-interval' => 1,
         'tooltip' => 'This is how long in seconds it takes for the overlay to switch to and from its hover state.'
-      )
+      )*/
 	));
 }
