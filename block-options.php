@@ -1,34 +1,35 @@
 <?php
-/* This class must be included in another file and included later so we don't get an error about HeadwayBlockOptionsAPI class not existing. */
 
-class HeadwayExampleBlockOptions extends HeadwayBlockOptionsAPI {
-	
-	
+class BigLinkBlockOptions extends HeadwayBlockOptionsAPI {
+
 	public $tabs = array(
-		'example-tab' => 'Example Tab'
+    'options' => 'Big Link Options'
 	);
 
 	public $inputs = array(
-		'example-tab' => array(
-			
-			'example-input' => array(
-				'type' => 'text',
-				'name' => 'example-input', //This will be the setting you retrieve from the database.
-				'label' => 'Example Input',
-				'default' => '',
-				'tooltip' => 'Put anything relevant about the input in this tooltip.',
-				'callback' => "
-					if ( value.length > 0 ) {
-						block.find('.block-content p').text('Here\'s what the example input has for a value:' + value);
-					} else {
-						block.find('.block-content p').text('The example input has nothing in it yet!');
-					}
-				"
-				//Use the argument above to run JavaScript when the input changed.  The variables available are block and value.
-			)
-			
-		)
-	);
-	
-	
+		'options' => array(
+			'content' => array(
+				'type' => 'wysiwyg',
+				'name' => 'content',
+				'label' => 'Content',
+				'default' => null
+			),
+			'linkurl' => array(
+        'type' => 'text',
+        'name' => 'linkurl',
+        'label' => 'Link URL',
+        'default' => '',
+        'tooltip' => 'This is where clicking the block takes the user'
+			),
+			'fade-time' => array(
+        'type' => 'slider',
+        'name' => 'fade-time',
+        'label' => 'Fade Effect Time',
+        'default' => .5,
+        'slider-min' => 0,
+        'slider-max' => 5,
+        'slider-interval' => .1,
+        'tooltip' => 'This is how long in seconds it takes for the overlay to switch to and from its hover state.'
+      )
+	));
 }

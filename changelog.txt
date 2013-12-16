@@ -1,3 +1,11 @@
+....-=*0.02*=-....
+12-16-13     v0.02
+Lionel Di Giacomo
+
+*Block now successfully registers in headway
+*Doesn't do anything
+*Still proud
+
 ....-=*0.01*=-....
 12-15-13     v0.01
 Lionel Di Giacomo
