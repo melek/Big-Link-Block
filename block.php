@@ -57,7 +57,7 @@ class BigLinkBlock extends HeadwayBlockAPI {
 				'Clicked' => '.big-link-overlay:active'
 			)
 		));
-		
+/* May not need this! Adds Design tab for the text, right now unused.		
 		$this->register_block_element(array(
 			'id' => 'text', 
 			'name' => 'Text', 
@@ -65,14 +65,14 @@ class BigLinkBlock extends HeadwayBlockAPI {
 			'properties' => array('font', 'text-shadow')
 			)
 		);
-		
+*/		
 	}
 	
 	function content($block) {
 		
 		$big_link_content = parent::get_setting($block, 'content', null); 
 		
-		$big_link_url = parent::get_setting($block, 'link-url', null);
+		$big_link_url = parent::get_setting($block, 'big-link-url', null);
 		
     echo '<p>
 <a href="'.$big_link_url.'"><span class="big-link-overlay"></span></a></p>';

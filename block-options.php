@@ -16,7 +16,7 @@ class BigLinkBlockOptions extends HeadwayBlockOptionsAPI {
 			),
 			'linkurl' => array(
         'type' => 'text',
-        'name' => 'linkurl',
+        'name' => 'big-link-url',
         'label' => 'Link URL',
         'default' => '',
         'tooltip' => 'This is where clicking the block takes the user'

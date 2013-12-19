@@ -7,8 +7,10 @@ Lionel Di Giacomo
   -Overlay should function, according to block options
   -Overlay ought to be stylable in design mode
 
-v.03a
+v0.03a
 *Added missing block-type css, added some comments to css
+v0.03b
+*Fixed some variable names
 
 ....-=*0.02*=-....
 12-16-13     v0.02
