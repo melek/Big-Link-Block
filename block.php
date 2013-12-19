@@ -11,11 +11,17 @@ class BigLinkBlock extends HeadwayBlockAPI {
 
 	public $description = 'A custom text block with an anchor overlay which serves as one big button.';
 		
-	function dynamic_css($block_id) {
-		
-  return 
+	   
+    function dynamic_css($block_id) {
+ return 
   '
-  .big-link-overlay {
+//This rule allows .big-link-overlay to be contained within the block.
+.block-type-big-link-block {
+ position:relative;
+}
+
+//The overlay rules, including transition properties
+.big-link-overlay {
   position:absolute; 
   width:100%;
   height:100%;
@@ -24,16 +30,16 @@ class BigLinkBlock extends HeadwayBlockAPI {
   z-index: 1;
   background-color:rgba(0, 0, 0, .1);
   transition-property: background-color;
-  transition-duration: 0.25s
+  transition-duration: 0.25s;
 }
 
-.big-link-overlay {
+.big-link-overlay:hover {
   background-color:transparent;
   transition-property: background-color;
-  transition-duration: 0.25s
+  transition-duration: 0.25s;
 
 }';
-		
+	
 	}
 
 
@@ -66,9 +72,10 @@ class BigLinkBlock extends HeadwayBlockAPI {
 		
 		$big_link_content = parent::get_setting($block, 'content', null); 
 		
-		$big_link_url = parent::get_setting($block, 'link_url', null);
+		$big_link_url = parent::get_setting($block, 'link-url', null);
 		
-    echo '<p><a href="'..'"><span class="big-link-overlay"></span></a></p>\n');
+    echo '<p>
+<a href="'.$big_link_url.'"><span class="big-link-overlay"></span></a></p>';
     
     echo headway_parse_php(do_shortcode(stripslashes($big_link_content)));
 

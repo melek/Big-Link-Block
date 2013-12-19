@@ -10,7 +10,7 @@ of a 'light up' rollover. Otherwise quite similar to the 'custom code' block.
 
 Forked from the 'Headway Example Block' on GitHub: https://github.com/headwaythemes/Headway-Block-Example
 
-Version: 0.03
+Version: 0.03a
 Author: Lionel Di Giacomo
 Author URI: http://digiacom.wordpress.com
 License: GNU GPL v2

@@ -25,5 +25,5 @@
     For the latest version of WordPress visit
       http://www.wordpress.org
     
-    To contact the plugin author, please comment on the github
+    To contact the plugin author, please visit the github
       repository.
